@@ -193,7 +193,7 @@ python evaluate_model.py --config configs/test/eval_config.json
         "output": "answer"
     },
     "max_new_tokens": 128,
-    "torch_dtype": "bfloat16",
+    "torch_dtype": "float16",
     "gpu_ids": [0]
 }
 ```
