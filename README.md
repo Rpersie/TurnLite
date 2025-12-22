@@ -1,6 +1,6 @@
-# Turn-lite: Conversational Turn-taking Detection
+# TurnLite: Lightweight Interruption Detection for Conversational Turn-Taking in Chinese Spoken Dialogue Systems
 
-Turn-lite 是一个专为会话轮次检测（Turn-taking Detection）设计的轻量级框架。它基于 Qwen 系列大语言模型，支持从原始数据处理、模型微调到自动化评估的全流程。
+TurnLite 是一个专为会话轮次检测（Turn-taking Detection）设计的轻量级框架。它基于 Qwen 系列大语言模型，支持从原始数据处理、模型微调到自动化评估的全流程。
 
 <p align="center">
   <img src="figures/fig1.png" alt="Framework Overview" width="600">
@@ -70,7 +70,7 @@ Turn-lite 是一个专为会话轮次检测（Turn-taking Detection）设计的�
 ### 目录结构
 
 ```text
-Turn-lite/
+TurnLite/
 ├── configs/           # 训练与评估的配置文件 (JSON)
 ├── data/              # 存放原始数据及处理后数据
 ├── data_processor.py  # 数据转换与 Tokenizer 处理
