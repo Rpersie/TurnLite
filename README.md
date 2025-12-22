@@ -201,7 +201,7 @@ python evaluate_model.py --config configs/test/eval_config.json
 
 ## 引用
 
-如果您在研究中使用了本项目或相关技术，请考虑引用以下论文：
+如果您在研究中使用了本项目或相关技术，请考虑引用下面论文：
 
 ```bibtex
 @misc{li2025easyturnintegratingacoustic,
