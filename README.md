@@ -141,7 +141,20 @@ python evaluate_model.py --config configs/test/eval_config.json
 | TurnLiteV1 | DPT | 0.82/0.81 | 0.82/0.85 | 1.00/0.97 | 0.88/0.88 |
 | TurnLiteV2 | SFT | 0.91/0.98 | 0.99/0.87 | 1.00/0.98 | 0.95/0.95 |
 | TurnLiteV3 | DPT+SFT | 0.96/0.95 | 0.94/0.96 | 1.00/0.99 | 0.97/0.97 |
-| **TurnLiteV4** | **DPT+SFT+CoT** | **0.94/0.96** | **0.92/0.96** | **1.00/0.97** | **0.96/0.96** |
+| TurnLiteV4 | **DPT+SFT+CoT** | **0.94/0.96** | **0.92/0.96** | **1.00/0.97** | **0.96/0.96** |
+
+### 3. aslp-test 性能评估
+在 aslp-test 测试集上，数值格式为：**Precision (P) / Recall (R)**。
+
+| System | Strategy | Finish (P/R) | Unfinish (P/R) | Wait (P/R) | Average (P/R) |
+|:---|:---|:---|:---|:---|:---|
+| Paraformer + TEN | - | 0.87/- | 0.89/- | 0.91/- | 0.89/- |
+| Smart Turn V2 | - | 0.79/- | 0.62/- | -/- | -/- |
+| Easy Turn | - | 0.96/- | 0.98/- | 0.98/- | 0.97/- |
+| TurnLiteV3 | - | 0.95/0.82 | 0.86/0.96 | 0.88/0.95 | 0.90/0.91 |
+| **TurnLiteV4** | **DPT+SFT+CoT** | **0.95/0.91** | **0.93/0.95** | **0.90/0.96** | **0.93/0.94** |
+
+
 
 > **注**：
 > * **DPT**: Domain Pre-training (领域预训练)
