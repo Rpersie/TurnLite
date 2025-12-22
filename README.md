@@ -31,7 +31,7 @@ TurnLite 是一个专为会话轮次检测（Turn-taking Detection）设计的�
     *   `train.py`: 集成 `Trainer` 的高效微调脚本，支持 TensorBoard 日志记录。
     *   `evaluate_model.py`: 自动化的评估工具，生成详细的分类报告和混淆矩阵。
 
-## 基于规则引导的 Prompt 策略 (Rule-guided Prompts)
+## 基于规则引导的 Prompt 策略
 
 为了精准识别会话状态，TurnLite 采用了结构化的 Prompt 引导策略。系统 Prompt 中内置了针对不同状态的判定准则：
 
@@ -116,7 +116,7 @@ python evaluate_model.py --config configs/test/eval_config.json --model_path ./e
 *   `classification_report.txt`: 标准分类指标（精确率、召回率、F1值）。
 *   `confusion_matrix.png`: 混淆矩阵热图，直观展示分类效果。
 
-## 实验结果 (Benchmarks)
+## 实验结果
 
 我们在开源测试集上对 TurnLite 的性能进行了评估。为了兼顾展示效率，下表中的数值格式为：**精确率 (Prec.) / 召回率 (Rec.)**。
 
