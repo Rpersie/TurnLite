@@ -199,6 +199,39 @@ python evaluate_model.py --config configs/test/eval_config.json
 }
 ```
 
+## 引用
+
+如果您在研究中使用了本项目或相关技术，请考虑引用以下论文：
+
+```bibtex
+@misc{li2025easyturnintegratingacoustic,
+      title={Easy Turn: Integrating Acoustic and Linguistic Modalities for Robust Turn-Taking in Full-Duplex Spoken Dialogue Systems}, 
+      author={Guojian Li and Chengyou Wang and Hongfei Xue and Shuiyuan Wang and Dehui Gao and Zihan Zhang and Yuke Lin and Wenjie Li and Longshuai Xiao and Zhonghua Fu and Lei Xie},
+      year={2025},
+      eprint={2509.23938},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.23938}, 
+}
+
+@misc{chen2025fireredchatpluggablefullduplexvoice,
+      title={FireRedChat: A Pluggable, Full-Duplex Voice Interaction System with Cascaded and Semi-Cascaded Implementations}, 
+      author={Junjie Chen and Yao Hu and Junjie Li and Kangyue Li and Kun Liu and Wenpeng Li and Xu Li and Ziyuan Li and Feiyu Shen and Xu Tang and Manzhen Wei and Yichen Wu and Fenglong Xie and Kaituo Xu and Kun Xie},
+      year={2025},
+      eprint={2509.06502},
+      archivePrefix={arXiv},
+      primaryClass={cs.SD},
+      url={https://arxiv.org/abs/2509.06502}, 
+}
+
+@misc{TEN_Turn_Detection,
+author = {TEN Team},
+title = {TEN Turn Detection: Turn detection for full-duplex dialogue communication},
+year = {2025},
+url = {https://github.com/TEN-framework/ten-turn-detection},
+}
+```
+
 ## 许可证
 
 [MIT License](LICENSE)
