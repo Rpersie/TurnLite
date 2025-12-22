@@ -57,8 +57,42 @@ TurnLite 是一个专为会话轮次检测（Turn-taking Detection）设计的�
 *   **情绪拒绝**：带有负面情绪的终止信号。例：“烦死了”、“闭嘴”、“别再打电话了”。
 *   **礼貌结束**：常规的对话收尾。例：“再见”、“拜拜”、“我先挂了”。
 
+
 ## 快速开始
 
+### 安装
+
+```
+git clone https://github.com/Rpersie/TurnLite/tree/main
+pip install "transformers>=4.45.0"
+pip install "torch>=2.0.0"
+```
+
+### 模型下载
+
+TurnLite 模型可在魔搭社区（ModelScope）下载：
+
+- 模型仓库：[ceshiceshi456/TurnLite](https://www.modelscope.cn/models/ceshiceshi456/TurnLite)
+
+您可以通过以下几种方式下载模型：
+
+1. **使用 Git LFS**：
+
+   ```bash
+   # 如果尚未安装 Git LFS，请先安装
+   git lfs install
+
+   # 克隆包含模型权重的仓库
+   git clone https://www.modelscope.cn/ceshiceshi456/TurnLite.git
+   ```
+
+2. **使用魔搭社区 Hub 库**：
+
+   ```python
+   from modelscope import snapshot_download
+
+   model_dir = snapshot_download('ceshiceshi456/TurnLite')
+   
 ### 环境依赖
 
 *   Python 3.8+
