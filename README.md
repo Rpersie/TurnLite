@@ -1,4 +1,4 @@
-# TurnLite: Lightweight Interruption Detection for Conversational Turn-Taking in Chinese Spoken Dialogue Systems
+# TurnLite:  for Conversational Turn-Taking in Chinese Spoken Dialogue Systems
 
 TurnLite 是一个专为会话轮次检测（Turn-taking Detection）设计的轻量级框架。它基于 Qwen 系列大语言模型，支持从原始数据处理、模型微调到自动化评估的全流程。
 
@@ -108,7 +108,7 @@ python train.py --config configs/train/your_train_config.json
 对训练好的模型进行全面评估：
 
 ```bash
-python evaluate_model.py --config configs/test/eval_config.json --model_path ./exp/checkpoint-1000
+python evaluate_model.py --config configs/test/eval_config.json 
 ```
 
 评估完成后，会在 `evaluation_results/` 目录下生成：
