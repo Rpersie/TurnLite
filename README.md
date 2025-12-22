@@ -144,16 +144,16 @@ python evaluate_model.py --config configs/test/eval_config.json
 | TurnLiteV4 | **DPT+SFT+CoT** | **0.94/0.96** | **0.92/0.96** | **1.00/0.97** | **0.96/0.96** |
 
 ### 3. aslp-test 性能评估
-在 aslp-test 测试集上，数值格式为：**Precision (P) / Recall (R)**。
+在aslp-test测试集上，数值格式为：**Precision (P) / Recall (R)**。
 
 | System | Modality | Finish (P/R) | Unfinish (P/R) | Wait (P/R) | Average (P/R) |
 |:---|:---|:---|:---|:---|:---|
-| Paraformer + TEN | Linguistic | 0.87/- | 0.89/- | 0.91/- | 0.89/- |
-| Smart Turn V2 | Linguistic | 0.79/- | 0.62/- | -/- | -/- |
+| Paraformer + TEN | Linguistic | 0.86/- | 0.89/- | 0.91/- | -/- |
+| Smart Turn V2 | Linguistic | 0.78/- | 0.62/- | -/- | -/- |
 | Finetuned Qwen2.5-0.5B-Instruct | Linguistic-only | -/- | -/- | -/- | 0.86/- |
 | Finetuned Whisper + Linear | Acoustic-only | -/- | -/- | -/- | 0.85/- |
-| Finetuned Qwen2.5-0.5B-Instruct | Linguistic-only | -/- | -/- | -/- | 0.86/- |
-| Easy Turn | Acoustic+Linguistic | 0.96/- | 0.98/- | 0.98/- | 0.97/- |
+| Easy Turn + onlystate | Acoustic+Linguistic | -/- | -/- | -/- | 0.87/- |
+| Easy Turn | Acoustic+Linguistic | 0.96/- | 0.97/- | 0.98/- | 0.95/- |
 | TurnLiteV3 | DPT+SFT | 0.95/0.82 | 0.86/0.96 | 0.88/0.95 | 0.90/0.91 |
 | **TurnLiteV4** | **DPT+SFT+CoT** | **0.95/0.91** | **0.93/0.95** | **0.90/0.96** | **0.93/0.94** |
 
