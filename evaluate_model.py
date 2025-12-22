@@ -1,4 +1,5 @@
 import json
+import re
 import pandas as pd
 import torch
 import os
@@ -268,13 +269,36 @@ class QwenEvaluator:
         
         return results_path
     
+    def extract_label(self, text):
+        """Extract label from raw prediction text, handling CoT tags"""
+        if not text:
+            return ""
+        
+        # 1. 尝试从 <solution> 标签提取
+        if '<solution>' in text and '</solution>' in text:
+            match = re.search(r'<solution>(.*?)</solution>', text, re.DOTALL)
+            if match:
+                return match.group(1).strip().lower()
+        
+        # 2. 如果没有标签，或者是其他格式，直接清理
+        # 移除 <think>...</think> 部分（如果存在但没有 solution 标签）
+        text_cleansed = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+        
+        # 3. 寻找匹配的类别 (从长到短匹配以避免子串问题，如 finished 误匹配 unfinished)
+        text_lower = text_cleansed.lower()
+        for cls in sorted(self.classes, key=len, reverse=True):
+            if cls in text_lower:
+                return cls
+        
+        return text_lower
+
     def analyze_results(self, results):
         """Analyze results and generate metrics"""
         output_dir = Path(self.config["output_dir"])
         
-        # Extract labels
+        # Extract labels with extraction logic
         y_true = [item["true_label"] for item in results]
-        y_pred = [item["pred_label"] for item in results]
+        y_pred = [self.extract_label(item["pred_label"]) for item in results]
         
         # Filter valid labels
         valid_indices = [i for i in range(len(y_true)) 
