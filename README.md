@@ -213,7 +213,17 @@ python evaluate_model.py --config configs/test/eval_config.json
 | **Wait** | 闭嘴，立刻停止 | wait | **推理**: 含有明确停止对话的请求，属于情绪性拒绝。<br>**预测**: `wait` |
 | **Wait** | 请现在保持安静 | wait | **推理**: 表达了用户希望对方暂时保持安静的请求，属于明确拒绝继续。<br>**预测**: `wait` |
 
+### 5. Latency Comparison (推理延迟对比)
+TurnLite 在保持高精度的同时，实现了极低的推理延迟，适用于全双工实时对话场景。
 
+| System | Latency (ms) | Parameters（MB） |
+|:---|:---:|:---:|
+| Easy-Turn | 263 | 850 |
+| Paraformer + TEN | 204 | 7220 |
+| FireRedChat | 170 | 7220 |
+| **TurnLite (Ours)** | **100** | **722** |
+
+> TurnLite 的推理延迟仅为 **100ms**，比 Easy-Turn 快 **2.6x**，比 FireRedChat 快 **1.7x**，比 TEN 快 **2x**，非常适合低延迟的全双工语音交互系统。
 
 ## 配置示例
 
@@ -234,8 +244,6 @@ python evaluate_model.py --config configs/test/eval_config.json
 ```
 
 ## 引用
-
-如果您在研究中使用了本项目或相关技术，请考虑引用下面论文：
 
 ```bibtex
 @misc{li2025easyturnintegratingacoustic,
