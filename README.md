@@ -133,7 +133,7 @@ python evaluate_model.py --config configs/test/eval_config.json
 | **TurnLiteV4** | **DPT+SFT+CoT** | **0.93/0.97** | **0.97/0.93** | **0.97/0.96** | **0.96/0.95** |
 
 ### 2. KeSpeech-Test 性能评估
-在 KeSpeech-Test 测试集上，数值格式为：**Precision (P) / Recall (R)**。
+在KeSpeech-Test测试集上，数值格式为：**Precision (P) / Recall (R)**。
 
 | System | Strategy | Finish (P/R) | Unfinish (P/R) | Wait (P/R) | Average (P/R) |
 |:---|:---|:---|:---|:---|:---|
@@ -153,7 +153,7 @@ python evaluate_model.py --config configs/test/eval_config.json
 | Finetuned Qwen2.5-0.5B-Instruct | Linguistic-only | -/- | -/- | -/- | 0.86/- |
 | Finetuned Whisper + Linear | Acoustic-only | -/- | -/- | -/- | 0.85/- |
 | Easy Turn + onlystate | Acoustic+Linguistic | -/- | -/- | -/- | 0.87/- |
-| Easy Turn | Acoustic+Linguistic | 0.96/- | 0.97/- | 0.98/- | 0.95/- |
+| Easy Turn | Acoustic+Linguistic | **0.96/-** | **0.97/-** | **0.98/-** | **0.95/-** |
 | TurnLiteV3 | DPT+SFT | 0.95/0.82 | 0.86/0.96 | 0.88/0.95 | 0.90/0.91 |
 | **TurnLiteV4** | **DPT+SFT+CoT** | **0.95/0.91** | **0.93/0.95** | **0.90/0.96** | **0.93/0.94** |
 
