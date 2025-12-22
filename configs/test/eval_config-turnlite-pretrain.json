@@ -1,0 +1,19 @@
+{
+    "model_path": "./exp/{experiment_name}/model/checkpoint-4050",
+    "system_prompt_file": "./data_paper/prompt/system_prompt.txt",
+    "test_raw_path": "./data/test_dataset/test.jsonl",
+    "experiment_name": "finetune-turnlite-pretrain-data-Qwen3-0.6B",
+    "data_fields": {
+      "input": "question",
+      "output": "answer"
+    },
+    "output_dir": "./evaluation_results",
+    "device": "auto",
+    "torch_dtype": "float32",
+    "gpu_ids": [
+      0
+    ],
+    "cpu_only": false,
+    "max_new_tokens": 2048,
+    "sample_size": -1
+  }
