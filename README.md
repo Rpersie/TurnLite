@@ -246,7 +246,7 @@ TurnLite 在保持高精度的同时，实现了极低的推理延迟，适用�
 }
 ```
 
-## 引用
+## 参考文献(实验结果来源)
 
 ```bibtex
 @misc{li2025easyturnintegratingacoustic,
@@ -274,6 +274,20 @@ author = {TEN Team},
 title = {TEN Turn Detection: Turn detection for full-duplex dialogue communication},
 year = {2025},
 url = {https://github.com/TEN-framework/ten-turn-detection},
+}
+```
+
+
+## 引用
+
+If you use TurnLite in your research or applications, please cite:
+
+```bibtex
+@misc{Turnlite,
+  author = {Long Wu, Lingchao Zhao, Yuanzhong Zheng, Yaoxuan Wang, Haojun Fei},
+  title = {Turnlite: Lightweight interruption detection for conversational turn-taking in chinese spoken dialogue systems},
+  year = {2025},
+  url = {},
 }
 ```
 
