@@ -162,8 +162,8 @@ python evaluate_model.py --config configs/test/eval_config.json
 ### 1. Tenturn-Test 性能评估
 在 Tenturn-Test 测试集上，数值格式为：**Precision (P) / Recall (R)**。
 
-> **注**：
-> * **model A和Tenturn**: 结果来自于 (https://github.com/TEN-framework/ten-turn-detection)
+
+> **model A和Tenturn**: 结果来自于 (https://github.com/TEN-framework/ten-turn-detection)
 
 | System | Strategy | Finish (P/R) | Unfinish (P/R) | Wait (P/R) | Average (P/R) |
 |:---|:---|:---|:---|:---|:---|
