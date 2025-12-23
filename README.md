@@ -162,6 +162,9 @@ python evaluate_model.py --config configs/test/eval_config.json
 ### 1. Tenturn-Test 性能评估
 在 Tenturn-Test 测试集上，数值格式为：**Precision (P) / Recall (R)**。
 
+> **注**：
+> * **model A和Tenturn**: 结果来自于 (https://github.com/TEN-framework/ten-turn-detection)
+
 | System | Strategy | Finish (P/R) | Unfinish (P/R) | Wait (P/R) | Average (P/R) |
 |:---|:---|:---|:---|:---|:---|
 | model A | - | -/0.75 | -/0.89 | -/- | -/- |
@@ -216,12 +219,12 @@ python evaluate_model.py --config configs/test/eval_config.json
 ### 5. Latency Comparison (推理延迟对比)
 TurnLite 在保持高精度的同时，实现了极低的推理延迟，适用于全双工实时对话场景。
 
-| System | Latency (ms) | Parameters（MB） |
+| System | Latency (ms) | Parameters(B) |
 |:---|:---:|:---:|
-| Easy-Turn | 263 | 850 |
-| Paraformer + TEN | 204 | 7220 |
-| FireRedChat | 170 | 7220 |
-| **TurnLite (Ours)** | **100** | **722** |
+| Easy-Turn | 263 | 0.8 |
+| Paraformer + TEN | 204 | 7 |
+| FireRedChat | 170 | 8 |
+| **TurnLite (Ours)** | **100** | **0.6** |
 
 > TurnLite 的推理延迟仅为 **100ms**，比 Easy-Turn 快 **2.6x**，比 FireRedChat 快 **1.7x**，比 TEN 快 **2x**，非常适合低延迟的全双工语音交互系统。
 
